@@ -4,7 +4,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amady Sacko | Portfolio</title>
+    <title>Amady Sacko | Portfolio</title><!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio professionnel d'Amady Sacko : médecine vétérinaire, leadership et engagement associatif.">
+  <meta name="theme-color" content="#081525">
+  <title>Amady Sacko — Portfolio</title>
+  <style>
+    :root {
+      --navy: #081525;
+      --navy-2: #10243b;
+      --panel: rgba(18, 39, 61, .78);
+      --gold: #e4bd68;
+      --cream: #f4f0e7;
+      --muted: #b5c1ce;
+      --line: rgba(228, 189, 104, .28);
+      --mint: #9ed9c3;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background:
+        radial-gradient(ellipse at 80% 10%, rgba(43, 92, 119, .24), transparent 35%),
+        radial-gradient(ellipse at 10% 45%, rgba(228, 189, 104, .08), transparent 30%),
+        var(--navy);
+      color: var(--cream);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .container { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(8, 21, 37, .88); backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav-wrap { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-weight: 800; letter-spacing: .14em; font-size: .9rem; text-decoration: none; }
+    .brand span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 22px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: .88rem; transition: color .2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .lang-switch { border: 1px solid var(--line); background: transparent; color: var(--cream); padding: 8px 12px; border-radius: 999px; cursor: pointer; font-weight: 700; }
+    .lang-switch:hover { background: rgba(228,189,104,.12); }
+    .hero { padding: 100px 0 88px; position: relative; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 56px; align-items: center; }
+    .eyebrow { color: var(--gold); text-transform: uppercase; letter-spacing: .2em; font-size: .76rem; font-weight: 800; margin-bottom: 22px; }
+    h1 { font-size: clamp(2.7rem, 7vw, 5.7rem); line-height: .98; letter-spacing: -.055em; max-width: 760px; }
+    h1 em { color: var(--gold); font-style: normal; }
+    .hero-lead { color: var(--muted); max-width: 650px; font-size: clamp(1rem, 2vw, 1.2rem); margin-top: 28px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .button { display: inline-flex; justify-content: center; align-items: center; padding: 12px 18px; border-radius: 6px; text-decoration: none; font-weight: 800; font-size: .92rem; transition: transform .2s, background .2s; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { background: var(--gold); color: var(--navy); }
+    .button-secondary { border: 1px solid rgba(255,255,255,.22); color: var(--cream); }
+    .signature-card { border: 1px solid var(--line); border-radius: 18px; padding: 28px; background: linear-gradient(145deg, rgba(24,49,72,.92), rgba(9,24,40,.78)); box-shadow: 0 30px 80px rgba(0,0,0,.22); transform: rotate(1.5deg); }
+    .orbit { height: 180px; width: 180px; border: 1px solid rgba(228,189,104,.48); border-radius: 50%; margin: 0 auto 24px; display: grid; place-items: center; position: relative; }
+    .orbit::before, .orbit::after { content: ""; position: absolute; inset: 15px; border: 1px dashed rgba(158,217,195,.55); border-radius: 50%; }
+    .orbit::after { inset: 34px; border-style: solid; border-color: rgba(228,189,104,.25); }
+    .orbit-mark { font-size: 3.2rem; color: var(--gold); font-weight: 300; letter-spacing: -.08em; }
+    .card-label { text-transform: uppercase; color: var(--mint); font-size: .72rem; letter-spacing: .17em; font-weight: 800; }
+    .signature-card h2 { font-size: 1.5rem; margin: 7px 0 8px; }
+    .signature-card p { color: var(--muted); font-size: .92rem; }
+    .mini-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .mini-tags span { font-size: .74rem; border: 1px solid rgba(255,255,255,.12); padding: 5px 9px; border-radius: 999px; color: var(--cream); }
+    .intro-strip { border-block: 1px solid rgba(255,255,255,.09); background: rgba(255,255,255,.025); }
+    .strip-inner { padding: 21px 0; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; color: var(--muted); font-size: .85rem; }
+    .strip-inner strong { color: var(--gold); font-weight: 700; }
+    section.content-section { padding: 82px 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 32px; }
+    .section-kicker { color: var(--gold); text-transform: uppercase; letter-spacing: .18em; font-size: .73rem; font-weight: 800; margin-bottom: 10px; }
+    h2.section-title { font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1.08; letter-spacing: -.035em; }
+    .section-note { color: var(--muted); max-width: 360px; font-size: .92rem; }
+    .about-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 28px; }
+    .quote-panel { min-height: 250px; padding: 30px; border: 1px solid var(--line); border-radius: 12px; background: linear-gradient(145deg, rgba(228,189,104,.1), transparent); display: flex; flex-direction: column; justify-content: space-between; }
+    .quote-mark { font-family: Georgia, serif; font-size: 4rem; color: var(--gold); line-height: .7; }
+    .quote-panel p { font-family: Georgia, serif; font-size: 1.35rem; line-height: 1.45; }
+    .quote-panel small { color: var(--muted); margin-top: 20px; }
+    .about-copy { padding: 10px 0; }
+    .about-copy p { color: var(--muted); margin-bottom: 16px; }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill-list span { padding: 8px 12px; border-radius: 6px; background: rgba(158,217,195,.08); border: 1px solid rgba(158,217,195,.18); color: var(--mint); font-size: .82rem; }
+    .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .info-card { padding: 26px; background: var(--panel); border: 1px solid rgba(255,255,255,.09); border-radius: 12px; transition: transform .25s, border-color .25s; }
+    .info-card:hover { transform: translateY(-5px); border-color: var(--line); }
+    .card-number { color: var(--gold); font-size: .8rem; letter-spacing: .12em; font-weight: 800; }
+    .info-card h3 { margin: 15px 0 10px; font-size: 1.18rem; }
+    .info-card p { color: var(--muted); font-size: .91rem; }
+    .timeline { border-left: 1px solid var(--line); margin-left: 8px; padding-left: 28px; display: grid; gap: 24px; }
+    .timeline-item { position: relative; padding: 4px 0 8px; }
+    .timeline-item::before { content: ""; position: absolute; width: 10px; height: 10px; border-radius: 50%; background: var(--gold); left: -34px; top: 11px; box-shadow: 0 0 0 5px rgba(228,189,104,.1); }
+    .timeline-item h3 { font-size: 1.1rem; margin-bottom: 5px; }
+    .timeline-item p { color: var(--muted); max-width: 780px; }
+    .contact-panel { padding: 36px; border-radius: 16px; border: 1px solid var(--line); background: linear-gradient(120deg, rgba(228,189,104,.12), rgba(158,217,195,.06)); display: flex; justify-content: space-between; align-items: center; gap: 30px; }
+    .contact-panel p { color: var(--muted); max-width: 650px; margin-top: 10px; }
+    footer { border-top: 1px solid rgba(255,255,255,.09); padding: 25px 0; color: var(--muted); font-size: .82rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+    @media (max-width: 800px) {
+      .nav-wrap { padding: 14px 0; align-items: flex-start; }
+      .nav-links { gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+      .nav-links a { font-size: .8rem; }
+      .hero { padding: 70px 0 60px; }
+      .hero-grid, .about-grid { grid-template-columns: 1fr; gap: 34px; }
+      .signature-card { max-width: 430px; transform: none; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .section-head { align-items: flex-start; flex-direction: column; }
+      .contact-panel { align-items: flex-start; flex-direction: column; padding: 26px; }
+    }
+    @media (max-width: 480px) {
+      .container { width: min(100% - 28px, 1120px); }
+      .nav-wrap { flex-wrap: wrap; }
+      .nav-links { width: 100%; justify-content: space-between; }
+      .nav-links a { font-size: .75rem; }
+      .hero { padding-top: 55px; }
+      .orbit { width: 150px; height: 150px; }
+      .strip-inner { gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home">AS<span>.</span> PORTFOLIO</a>
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="#about" data-fr="À propos" data-en="About">À propos</a>
+        <a href="#journey" data-fr="Parcours" data-en="Journey">Parcours</a>
+        <a href="#focus" data-fr="Domaines" data-en="Focus">Domaines</a>
+        <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
+        <button class="lang-switch" id="languageToggle" type="button" aria-label="Switch language">EN</button>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <header class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow" data-fr="Médecine vétérinaire · Leadership · Engagement" data-en="Veterinary medicine · Leadership · Community">Médecine vétérinaire · Leadership · Engagement</p>
+          <h1 data-fr="La science au service du vivant. <em>L'action</em> au service de l'avenir." data-en="Science in service of life. <em>Action</em> in service of the future.">La science au service du vivant. <em>L'action</em> au service de l'avenir.</h1>
+          <p class="hero-lead" data-fr="Je suis Amady Sacko, étudiant en médecine vétérinaire à l'Institut Agronomique et Vétérinaire Hassan II de Rabat. Je m'intéresse à la santé animale, au leadership et aux projets qui rapprochent les connaissances de l'action." data-en="I am Amady Sacko, a veterinary medicine student at the Hassan II Institute of Agronomy and Veterinary Medicine in Rabat. My interests include animal health, leadership, and projects that turn knowledge into action.">Je suis Amady Sacko, étudiant en médecine vétérinaire à l'Institut Agronomique et Vétérinaire Hassan II de Rabat. Je m'intéresse à la santé animale, au leadership et aux projets qui rapprochent les connaissances de l'action.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#journey" data-fr="Découvrir mon parcours ↗" data-en="Explore my journey ↗">Découvrir mon parcours ↗</a>
+            <a class="button button-secondary" href="#contact" data-fr="Entrer en contact" data-en="Get in touch">Entrer en contact</a>
+          </div>
+        </div>
+        <aside class="signature-card" aria-label="Profil">
+          <div class="orbit"><span class="orbit-mark">AS</span></div>
+          <p class="card-label" data-fr="Profil en mouvement" data-en="A profile in progress">Profil en mouvement</p>
+          <h2 data-fr="Curiosité. Rigueur. Engagement." data-en="Curiosity. Discipline. Commitment.">Curiosité. Rigueur. Engagement.</h2>
+          <p data-fr="Une approche à la croisée des sciences vétérinaires, de la communication et de l'action collective." data-en="An approach at the crossroads of veterinary science, communication, and collective action.">Une approche à la croisée des sciences vétérinaires, de la communication et de l'action collective.</p>
+          <div class="mini-tags"><span>Animal health</span><span>Leadership</span><span>Community</span></div>
+        </aside>
+      </div>
+    </header>
+
+    <div class="intro-strip">
+      <div class="container strip-inner">
+        <span><strong data-fr="Formation" data-en="Education">Formation</strong> · IAV Hassan II, Rabat</span>
+        <span><strong data-fr="Engagement" data-en="Engagement">Engagement</strong> · ASEM / AMESE</span>
+        <span><strong data-fr="Approche" data-en="Approach">Approche</strong> · Science + action</span>
+      </div>
+    </div>
+
+    <section class="content-section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><p class="section-kicker" data-fr="01 / À propos" data-en="01 / About">01 / À propos</p><h2 class="section-title" data-fr="Un parcours guidé par la curiosité." data-en="A journey guided by curiosity.">Un parcours guidé par la curiosité.</h2></div>
+          <p class="section-note" data-fr="Comprendre, apprendre et contribuer : trois moteurs de mon évolution." data-en="Understand, learn, and contribute: three drivers of my growth.">Comprendre, apprendre et contribuer : trois moteurs de mon évolution.</p>
+        </div>
+        <div class="about-grid">
+          <div class="quote-panel reveal"><span class="quote-mark">“</span><p data-fr="Le savoir prend toute sa valeur lorsqu'il se transforme en action utile." data-en="Knowledge reaches its full value when it becomes meaningful action.">Le savoir prend toute sa valeur lorsqu'il se transforme en action utile.</p><small data-fr="Ma vision personnelle" data-en="My personal outlook">Ma vision personnelle</small></div>
+          <div class="about-copy reveal">
+            <p data-fr="Mon parcours en médecine vétérinaire m'amène à explorer la santé animale, la prévention et le rôle des sciences dans le bien-être des animaux et des communautés." data-en="My veterinary studies lead me to explore animal health, prevention, and the role science plays in the well-being of animals and communities.">Mon parcours en médecine vétérinaire m'amène à explorer la santé animale, la prévention et le rôle des sciences dans le bien-être des animaux et des communautés.</p>
+            <p data-fr="En parallèle, mes engagements associatifs me permettent de développer mon sens de l'organisation, de la communication et du travail collectif. Je souhaite continuer à apprendre et à contribuer à des initiatives porteuses de sens." data-en="Alongside my studies, association work helps me develop organization, communication, and teamwork skills. I aim to keep learning and contribute to meaningful initiatives.">En parallèle, mes engagements associatifs me permettent de développer mon sens de l'organisation, de la communication et du travail collectif. Je souhaite continuer à apprendre et à contribuer à des initiatives porteuses de sens.</p>
+            <div class="pill-list"><span data-fr="Sciences vétérinaires" data-en="Veterinary science">Sciences vétérinaires</span><span data-fr="Leadership étudiant" data-en="Student leadership">Leadership étudiant</span><span data-fr="Communication" data-en="Communication">Communication</span><span data-fr="Organisation" data-en="Organization">Organisation</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="focus">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><p class="section-kicker" data-fr="02 / Mes domaines" data-en="02 / Areas of focus">02 / Mes domaines</p><h2 class="section-title" data-fr="Trois dimensions, une même ambition." data-en="Three dimensions, one shared ambition.">Trois dimensions, une même ambition.</h2></div>
+          <p class="section-note" data-fr="Relier les connaissances scientifiques à des projets concrets et collectifs." data-en="Connecting scientific knowledge with practical, collaborative projects.">Relier les connaissances scientifiques à des projets concrets et collectifs.</p>
+        </div>
+        <div class="cards-grid">
+          <article class="info-card reveal"><span class="card-number">01 — SCIENCE</span><h3 data-fr="Médecine vétérinaire" data-en="Veterinary medicine">Médecine vétérinaire</h3><p data-fr="Formation scientifique, santé animale, prévention et apprentissage pratique au contact des réalités du terrain." data-en="Scientific training, animal health, prevention, and practical learning connected to real-world needs.">Formation scientifique, santé animale, prévention et apprentissage pratique au contact des réalités du terrain.</p></article>
+          <article class="info-card reveal"><span class="card-number">02 — LEADERSHIP</span><h3 data-fr="Engagement associatif" data-en="Association leadership">Engagement associatif</h3><p data-fr="Participation à la vie étudiante, coordination d'activités et contribution à des initiatives collectives au sein de l'ASEM et de l'AMESE." data-en="Student engagement, activity coordination, and contribution to collective initiatives within ASEM and AMESE.">Participation à la vie étudiante, coordination d'activités et contribution à des initiatives collectives au sein de l'ASEM et de l'AMESE.</p></article>
+          <article class="info-card reveal"><span class="card-number">03 — IMPACT</span><h3 data-fr="Communication & projets" data-en="Communication & projects">Communication & projets</h3><p data-fr="Intérêt pour la prise de parole, la communication numérique, l'organisation événementielle et les projets qui mobilisent les personnes." data-en="An interest in public speaking, digital communication, event planning, and projects that bring people together.">Intérêt pour la prise de parole, la communication numérique, l'organisation événementielle et les projets qui mobilisent les personnes.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="journey">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><p class="section-kicker" data-fr="03 / Parcours" data-en="03 / Journey">03 / Parcours</p><h2 class="section-title" data-fr="Apprendre en cours et sur le terrain." data-en="Learning in class and in the field.">Apprendre en cours et sur le terrain.</h2></div>
+          <p class="section-note" data-fr="Une trajectoire en construction, nourrie par les études, les rencontres et l'engagement." data-en="A path in progress, shaped by study, encounters, and service.">Une trajectoire en construction, nourrie par les études, les rencontres et l'engagement.</p>
+        </div>
+        <div class="timeline reveal">
+          <article class="timeline-item"><h3 data-fr="Formation en médecine vétérinaire" data-en="Veterinary medicine studies">Formation en médecine vétérinaire</h3><p data-fr="Institut Agronomique et Vétérinaire Hassan II, Rabat — formation académique et scientifique en médecine vétérinaire." data-en="Hassan II Institute of Agronomy and Veterinary Medicine, Rabat — academic and scientific training in veterinary medicine.">Institut Agronomique et Vétérinaire Hassan II, Rabat — formation académique et scientifique en médecine vétérinaire.</p></article>
+          <article class="timeline-item"><h3 data-fr="Découverte du terrain vétérinaire" data-en="Exploring veterinary practice">Découverte du terrain vétérinaire</h3><p data-fr="Participation à des activités et visites pédagogiques, notamment autour de la reproduction animale et des pratiques vétérinaires." data-en="Participation in educational activities and field visits, including animal reproduction and veterinary practice.">Participation à des activités et visites pédagogiques, notamment autour de la reproduction animale et des pratiques vétérinaires.</p></article>
+          <article class="timeline-item"><h3 data-fr="Responsabilités et vie associative" data-en="Leadership and association life">Responsabilités et vie associative</h3><p data-fr="Engagement au sein d'associations étudiantes, avec un intérêt pour la coordination, l'intégration, la culture et les activités collectives." data-en="Involvement in student associations, with interests in coordination, integration, culture, and community activities.">Engagement au sein d'associations étudiantes, avec un intérêt pour la coordination, l'intégration, la culture et les activités collectives.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="contact">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div><p class="section-kicker" data-fr="04 / Contact" data-en="04 / Contact">04 / Contact</p><h2 class="section-title" data-fr="Construisons quelque chose d'utile." data-en="Let's build something meaningful.">Construisons quelque chose d'utile.</h2><p data-fr="Ouvert aux échanges autour de la médecine vétérinaire, des projets étudiants, du leadership et de la communication." data-en="Open to conversations about veterinary medicine, student projects, leadership, and communication.">Ouvert aux échanges autour de la médecine vétérinaire, des projets étudiants, du leadership et de la communication.</p></div>
+          <a class="button button-primary" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" data-fr="Me retrouver sur LinkedIn ↗" data-en="Find me on LinkedIn ↗">Me retrouver sur LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><span>© <span id="year"></span> Amady Sacko</span><span data-fr="Science · Engagement · Avenir" data-en="Science · Commitment · Future">Science · Engagement · Avenir</span></div></footer>
+
+  <script>
+    const languageToggle = document.getElementById('languageToggle');
+    let currentLanguage = 'fr';
+
+    function setLanguage(language) {
+      currentLanguage = language;
+      document.documentElement.lang = language;
+      document.querySelectorAll('[data-fr][data-en]').forEach((element) => {
+        element.innerHTML = element.dataset[language];
+      });
+      languageToggle.textContent = language === 'fr' ? 'EN' : 'FR';
+      languageToggle.setAttribute('aria-label', language === 'fr' ? 'Switch to English' : 'Passer en français');
+    }
+
+    languageToggle.addEventListener('click', () => {
+      setLanguage(currentLanguage === 'fr' ? 'en' : 'fr');
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
+  </script>
+</body>
+</html>
+
 
     <style>
         * {
@@ -26,7 +283,264 @@
             text-align: center;
             padding: 70px 20px;
             border-bottom: 5px solid #d4af37;
+        }<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio professionnel d'Amady Sacko : médecine vétérinaire, leadership et engagement associatif.">
+  <meta name="theme-color" content="#081525">
+  <title>Amady Sacko — Portfolio</title>
+  <style>
+    :root {
+      --navy: #081525;
+      --navy-2: #10243b;
+      --panel: rgba(18, 39, 61, .78);
+      --gold: #e4bd68;
+      --cream: #f4f0e7;
+      --muted: #b5c1ce;
+      --line: rgba(228, 189, 104, .28);
+      --mint: #9ed9c3;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background:
+        radial-gradient(ellipse at 80% 10%, rgba(43, 92, 119, .24), transparent 35%),
+        radial-gradient(ellipse at 10% 45%, rgba(228, 189, 104, .08), transparent 30%),
+        var(--navy);
+      color: var(--cream);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .container { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(8, 21, 37, .88); backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav-wrap { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-weight: 800; letter-spacing: .14em; font-size: .9rem; text-decoration: none; }
+    .brand span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 22px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: .88rem; transition: color .2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .lang-switch { border: 1px solid var(--line); background: transparent; color: var(--cream); padding: 8px 12px; border-radius: 999px; cursor: pointer; font-weight: 700; }
+    .lang-switch:hover { background: rgba(228,189,104,.12); }
+    .hero { padding: 100px 0 88px; position: relative; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 56px; align-items: center; }
+    .eyebrow { color: var(--gold); text-transform: uppercase; letter-spacing: .2em; font-size: .76rem; font-weight: 800; margin-bottom: 22px; }
+    h1 { font-size: clamp(2.7rem, 7vw, 5.7rem); line-height: .98; letter-spacing: -.055em; max-width: 760px; }
+    h1 em { color: var(--gold); font-style: normal; }
+    .hero-lead { color: var(--muted); max-width: 650px; font-size: clamp(1rem, 2vw, 1.2rem); margin-top: 28px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .button { display: inline-flex; justify-content: center; align-items: center; padding: 12px 18px; border-radius: 6px; text-decoration: none; font-weight: 800; font-size: .92rem; transition: transform .2s, background .2s; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { background: var(--gold); color: var(--navy); }
+    .button-secondary { border: 1px solid rgba(255,255,255,.22); color: var(--cream); }
+    .signature-card { border: 1px solid var(--line); border-radius: 18px; padding: 28px; background: linear-gradient(145deg, rgba(24,49,72,.92), rgba(9,24,40,.78)); box-shadow: 0 30px 80px rgba(0,0,0,.22); transform: rotate(1.5deg); }
+    .orbit { height: 180px; width: 180px; border: 1px solid rgba(228,189,104,.48); border-radius: 50%; margin: 0 auto 24px; display: grid; place-items: center; position: relative; }
+    .orbit::before, .orbit::after { content: ""; position: absolute; inset: 15px; border: 1px dashed rgba(158,217,195,.55); border-radius: 50%; }
+    .orbit::after { inset: 34px; border-style: solid; border-color: rgba(228,189,104,.25); }
+    .orbit-mark { font-size: 3.2rem; color: var(--gold); font-weight: 300; letter-spacing: -.08em; }
+    .card-label { text-transform: uppercase; color: var(--mint); font-size: .72rem; letter-spacing: .17em; font-weight: 800; }
+    .signature-card h2 { font-size: 1.5rem; margin: 7px 0 8px; }
+    .signature-card p { color: var(--muted); font-size: .92rem; }
+    .mini-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .mini-tags span { font-size: .74rem; border: 1px solid rgba(255,255,255,.12); padding: 5px 9px; border-radius: 999px; color: var(--cream); }
+    .intro-strip { border-block: 1px solid rgba(255,255,255,.09); background: rgba(255,255,255,.025); }
+    .strip-inner { padding: 21px 0; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; color: var(--muted); font-size: .85rem; }
+    .strip-inner strong { color: var(--gold); font-weight: 700; }
+    section.content-section { padding: 82px 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 32px; }
+    .section-kicker { color: var(--gold); text-transform: uppercase; letter-spacing: .18em; font-size: .73rem; font-weight: 800; margin-bottom: 10px; }
+    h2.section-title { font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1.08; letter-spacing: -.035em; }
+    .section-note { color: var(--muted); max-width: 360px; font-size: .92rem; }
+    .about-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 28px; }
+    .quote-panel { min-height: 250px; padding: 30px; border: 1px solid var(--line); border-radius: 12px; background: linear-gradient(145deg, rgba(228,189,104,.1), transparent); display: flex; flex-direction: column; justify-content: space-between; }
+    .quote-mark { font-family: Georgia, serif; font-size: 4rem; color: var(--gold); line-height: .7; }
+    .quote-panel p { font-family: Georgia, serif; font-size: 1.35rem; line-height: 1.45; }
+    .quote-panel small { color: var(--muted); margin-top: 20px; }
+    .about-copy { padding: 10px 0; }
+    .about-copy p { color: var(--muted); margin-bottom: 16px; }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill-list span { padding: 8px 12px; border-radius: 6px; background: rgba(158,217,195,.08); border: 1px solid rgba(158,217,195,.18); color: var(--mint); font-size: .82rem; }
+    .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .info-card { padding: 26px; background: var(--panel); border: 1px solid rgba(255,255,255,.09); border-radius: 12px; transition: transform .25s, border-color .25s; }
+    .info-card:hover { transform: translateY(-5px); border-color: var(--line); }
+    .card-number { color: var(--gold); font-size: .8rem; letter-spacing: .12em; font-weight: 800; }
+    .info-card h3 { margin: 15px 0 10px; font-size: 1.18rem; }
+    .info-card p { color: var(--muted); font-size: .91rem; }
+    .timeline { border-left: 1px solid var(--line); margin-left: 8px; padding-left: 28px; display: grid; gap: 24px; }
+    .timeline-item { position: relative; padding: 4px 0 8px; }
+    .timeline-item::before { content: ""; position: absolute; width: 10px; height: 10px; border-radius: 50%; background: var(--gold); left: -34px; top: 11px; box-shadow: 0 0 0 5px rgba(228,189,104,.1); }
+    .timeline-item h3 { font-size: 1.1rem; margin-bottom: 5px; }
+    .timeline-item p { color: var(--muted); max-width: 780px; }
+    .contact-panel { padding: 36px; border-radius: 16px; border: 1px solid var(--line); background: linear-gradient(120deg, rgba(228,189,104,.12), rgba(158,217,195,.06)); display: flex; justify-content: space-between; align-items: center; gap: 30px; }
+    .contact-panel p { color: var(--muted); max-width: 650px; margin-top: 10px; }
+    footer { border-top: 1px solid rgba(255,255,255,.09); padding: 25px 0; color: var(--muted); font-size: .82rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+    @media (max-width: 800px) {
+      .nav-wrap { padding: 14px 0; align-items: flex-start; }
+      .nav-links { gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+      .nav-links a { font-size: .8rem; }
+      .hero { padding: 70px 0 60px; }
+      .hero-grid, .about-grid { grid-template-columns: 1fr; gap: 34px; }
+      .signature-card { max-width: 430px; transform: none; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .section-head { align-items: flex-start; flex-direction: column; }
+      .contact-panel { align-items: flex-start; flex-direction: column; padding: 26px; }
+    }
+    @media (max-width: 480px) {
+      .container { width: min(100% - 28px, 1120px); }
+      .nav-wrap { flex-wrap: wrap; }
+      .nav-links { width: 100%; justify-content: space-between; }
+      .nav-links a { font-size: .75rem; }
+      .hero { padding-top: 55px; }
+      .orbit { width: 150px; height: 150px; }
+      .strip-inner { gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home">AS<span>.</span> PORTFOLIO</a>
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="#about" data-fr="À propos" data-en="About">À propos</a>
+        <a href="#journey" data-fr="Parcours" data-en="Journey">Parcours</a>
+        <a href="#focus" data-fr="Domaines" data-en="Focus">Domaines</a>
+        <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
+        <button class="lang-switch" id="languageToggle" type="button" aria-label="Switch language">EN</button>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <header class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow" data-fr="Médecine vétérinaire · Leadership · Engagement" data-en="Veterinary medicine · Leadership · Community">Médecine vétérinaire · Leadership · Engagement</p>
+          <h1 data-fr="La science au service du vivant. <em>L'action</em> au service de l'avenir." data-en="Science in service of life. <em>Action</em> in service of the future.">La science au service du vivant. <em>L'action</em> au service de l'avenir.</h1>
+          <p class="hero-lead" data-fr="Je suis Amady Sacko, étudiant en médecine vétérinaire à l'Institut Agronomique et Vétérinaire Hassan II de Rabat. Je m'intéresse à la santé animale, au leadership et aux projets qui rapprochent les connaissances de l'action." data-en="I am Amady Sacko, a veterinary medicine student at the Hassan II Institute of Agronomy and Veterinary Medicine in Rabat. My interests include animal health, leadership, and projects that turn knowledge into action.">Je suis Amady Sacko, étudiant en médecine vétérinaire à l'Institut Agronomique et Vétérinaire Hassan II de Rabat. Je m'intéresse à la santé animale, au leadership et aux projets qui rapprochent les connaissances de l'action.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#journey" data-fr="Découvrir mon parcours ↗" data-en="Explore my journey ↗">Découvrir mon parcours ↗</a>
+            <a class="button button-secondary" href="#contact" data-fr="Entrer en contact" data-en="Get in touch">Entrer en contact</a>
+          </div>
+        </div>
+        <aside class="signature-card" aria-label="Profil">
+          <div class="orbit"><span class="orbit-mark">AS</span></div>
+          <p class="card-label" data-fr="Profil en mouvement" data-en="A profile in progress">Profil en mouvement</p>
+          <h2 data-fr="Curiosité. Rigueur. Engagement." data-en="Curiosity. Discipline. Commitment.">Curiosité. Rigueur. Engagement.</h2>
+          <p data-fr="Une approche à la croisée des sciences vétérinaires, de la communication et de l'action collective." data-en="An approach at the crossroads of veterinary science, communication, and collective action.">Une approche à la croisée des sciences vétérinaires, de la communication et de l'action collective.</p>
+          <div class="mini-tags"><span>Animal health</span><span>Leadership</span><span>Community</span></div>
+        </aside>
+      </div>
+    </header>
+
+    <div class="intro-strip">
+      <div class="container strip-inner">
+        <span><strong data-fr="Formation" data-en="Education">Formation</strong> · IAV Hassan II, Rabat</span>
+        <span><strong data-fr="Engagement" data-en="Engagement">Engagement</strong> · ASEM / AMESE</span>
+        <span><strong data-fr="Approche" data-en="Approach">Approche</strong> · Science + action</span>
+      </div>
+    </div>
+
+    <section class="content-section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><p class="section-kicker" data-fr="01 / À propos" data-en="01 / About">01 / À propos</p><h2 class="section-title" data-fr="Un parcours guidé par la curiosité." data-en="A journey guided by curiosity.">Un parcours guidé par la curiosité.</h2></div>
+          <p class="section-note" data-fr="Comprendre, apprendre et contribuer : trois moteurs de mon évolution." data-en="Understand, learn, and contribute: three drivers of my growth.">Comprendre, apprendre et contribuer : trois moteurs de mon évolution.</p>
+        </div>
+        <div class="about-grid">
+          <div class="quote-panel reveal"><span class="quote-mark">“</span><p data-fr="Le savoir prend toute sa valeur lorsqu'il se transforme en action utile." data-en="Knowledge reaches its full value when it becomes meaningful action.">Le savoir prend toute sa valeur lorsqu'il se transforme en action utile.</p><small data-fr="Ma vision personnelle" data-en="My personal outlook">Ma vision personnelle</small></div>
+          <div class="about-copy reveal">
+            <p data-fr="Mon parcours en médecine vétérinaire m'amène à explorer la santé animale, la prévention et le rôle des sciences dans le bien-être des animaux et des communautés." data-en="My veterinary studies lead me to explore animal health, prevention, and the role science plays in the well-being of animals and communities.">Mon parcours en médecine vétérinaire m'amène à explorer la santé animale, la prévention et le rôle des sciences dans le bien-être des animaux et des communautés.</p>
+            <p data-fr="En parallèle, mes engagements associatifs me permettent de développer mon sens de l'organisation, de la communication et du travail collectif. Je souhaite continuer à apprendre et à contribuer à des initiatives porteuses de sens." data-en="Alongside my studies, association work helps me develop organization, communication, and teamwork skills. I aim to keep learning and contribute to meaningful initiatives.">En parallèle, mes engagements associatifs me permettent de développer mon sens de l'organisation, de la communication et du travail collectif. Je souhaite continuer à apprendre et à contribuer à des initiatives porteuses de sens.</p>
+            <div class="pill-list"><span data-fr="Sciences vétérinaires" data-en="Veterinary science">Sciences vétérinaires</span><span data-fr="Leadership étudiant" data-en="Student leadership">Leadership étudiant</span><span data-fr="Communication" data-en="Communication">Communication</span><span data-fr="Organisation" data-en="Organization">Organisation</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="focus">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><p class="section-kicker" data-fr="02 / Mes domaines" data-en="02 / Areas of focus">02 / Mes domaines</p><h2 class="section-title" data-fr="Trois dimensions, une même ambition." data-en="Three dimensions, one shared ambition.">Trois dimensions, une même ambition.</h2></div>
+          <p class="section-note" data-fr="Relier les connaissances scientifiques à des projets concrets et collectifs." data-en="Connecting scientific knowledge with practical, collaborative projects.">Relier les connaissances scientifiques à des projets concrets et collectifs.</p>
+        </div>
+        <div class="cards-grid">
+          <article class="info-card reveal"><span class="card-number">01 — SCIENCE</span><h3 data-fr="Médecine vétérinaire" data-en="Veterinary medicine">Médecine vétérinaire</h3><p data-fr="Formation scientifique, santé animale, prévention et apprentissage pratique au contact des réalités du terrain." data-en="Scientific training, animal health, prevention, and practical learning connected to real-world needs.">Formation scientifique, santé animale, prévention et apprentissage pratique au contact des réalités du terrain.</p></article>
+          <article class="info-card reveal"><span class="card-number">02 — LEADERSHIP</span><h3 data-fr="Engagement associatif" data-en="Association leadership">Engagement associatif</h3><p data-fr="Participation à la vie étudiante, coordination d'activités et contribution à des initiatives collectives au sein de l'ASEM et de l'AMESE." data-en="Student engagement, activity coordination, and contribution to collective initiatives within ASEM and AMESE.">Participation à la vie étudiante, coordination d'activités et contribution à des initiatives collectives au sein de l'ASEM et de l'AMESE.</p></article>
+          <article class="info-card reveal"><span class="card-number">03 — IMPACT</span><h3 data-fr="Communication & projets" data-en="Communication & projects">Communication & projets</h3><p data-fr="Intérêt pour la prise de parole, la communication numérique, l'organisation événementielle et les projets qui mobilisent les personnes." data-en="An interest in public speaking, digital communication, event planning, and projects that bring people together.">Intérêt pour la prise de parole, la communication numérique, l'organisation événementielle et les projets qui mobilisent les personnes.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="journey">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><p class="section-kicker" data-fr="03 / Parcours" data-en="03 / Journey">03 / Parcours</p><h2 class="section-title" data-fr="Apprendre en cours et sur le terrain." data-en="Learning in class and in the field.">Apprendre en cours et sur le terrain.</h2></div>
+          <p class="section-note" data-fr="Une trajectoire en construction, nourrie par les études, les rencontres et l'engagement." data-en="A path in progress, shaped by study, encounters, and service.">Une trajectoire en construction, nourrie par les études, les rencontres et l'engagement.</p>
+        </div>
+        <div class="timeline reveal">
+          <article class="timeline-item"><h3 data-fr="Formation en médecine vétérinaire" data-en="Veterinary medicine studies">Formation en médecine vétérinaire</h3><p data-fr="Institut Agronomique et Vétérinaire Hassan II, Rabat — formation académique et scientifique en médecine vétérinaire." data-en="Hassan II Institute of Agronomy and Veterinary Medicine, Rabat — academic and scientific training in veterinary medicine.">Institut Agronomique et Vétérinaire Hassan II, Rabat — formation académique et scientifique en médecine vétérinaire.</p></article>
+          <article class="timeline-item"><h3 data-fr="Découverte du terrain vétérinaire" data-en="Exploring veterinary practice">Découverte du terrain vétérinaire</h3><p data-fr="Participation à des activités et visites pédagogiques, notamment autour de la reproduction animale et des pratiques vétérinaires." data-en="Participation in educational activities and field visits, including animal reproduction and veterinary practice.">Participation à des activités et visites pédagogiques, notamment autour de la reproduction animale et des pratiques vétérinaires.</p></article>
+          <article class="timeline-item"><h3 data-fr="Responsabilités et vie associative" data-en="Leadership and association life">Responsabilités et vie associative</h3><p data-fr="Engagement au sein d'associations étudiantes, avec un intérêt pour la coordination, l'intégration, la culture et les activités collectives." data-en="Involvement in student associations, with interests in coordination, integration, culture, and community activities.">Engagement au sein d'associations étudiantes, avec un intérêt pour la coordination, l'intégration, la culture et les activités collectives.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="contact">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div><p class="section-kicker" data-fr="04 / Contact" data-en="04 / Contact">04 / Contact</p><h2 class="section-title" data-fr="Construisons quelque chose d'utile." data-en="Let's build something meaningful.">Construisons quelque chose d'utile.</h2><p data-fr="Ouvert aux échanges autour de la médecine vétérinaire, des projets étudiants, du leadership et de la communication." data-en="Open to conversations about veterinary medicine, student projects, leadership, and communication.">Ouvert aux échanges autour de la médecine vétérinaire, des projets étudiants, du leadership et de la communication.</p></div>
+          <a class="button button-primary" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" data-fr="Me retrouver sur LinkedIn ↗" data-en="Find me on LinkedIn ↗">Me retrouver sur LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><span>© <span id="year"></span> Amady Sacko</span><span data-fr="Science · Engagement · Avenir" data-en="Science · Commitment · Future">Science · Engagement · Avenir</span></div></footer>
+
+  <script>
+    const languageToggle = document.getElementById('languageToggle');
+    let currentLanguage = 'fr';
+
+    function setLanguage(language) {
+      currentLanguage = language;
+      document.documentElement.lang = language;
+      document.querySelectorAll('[data-fr][data-en]').forEach((element) => {
+        element.innerHTML = element.dataset[language];
+      });
+      languageToggle.textContent = language === 'fr' ? 'EN' : 'FR';
+      languageToggle.setAttribute('aria-label', language === 'fr' ? 'Switch to English' : 'Passer en français');
+    }
+
+    languageToggle.addEventListener('click', () => {
+      setLanguage(currentLanguage === 'fr' ? 'en' : 'fr');
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
         }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
+  </script>
+</body>
+</html>
+
 
         header h1 {
             font-size: 38px;
